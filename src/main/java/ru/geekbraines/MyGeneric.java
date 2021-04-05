@@ -23,7 +23,7 @@ public class MyGeneric<T extends Number> {
     }
 
     public ArrayList<T> toArrayList(T[] myArray) {
-        ArrayList<T> myArrayList = new ArrayList<>();
+        ArrayList<T> myArrayList = new ArrayList<>(myArray.length);
         boolean b;
         for (T t : myArray) {
             b = myArrayList.add(t);
