@@ -1,5 +1,6 @@
 package ru.geekbraines;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -22,9 +23,11 @@ public class MyGeneric<T extends Number> {
     }
 
     public ArrayList<T> toArrayList(T[] myArray) {
-        List<T> myArrayList;
-        myArrayList = Arrays.asList(myArray);
+        ArrayList<T> myArrayList = new ArrayList<>();
+        boolean b;
+        for (T t : myArray) {
+            b = myArrayList.add(t);
+        }
         return myArrayList;
     }
-
 }
